@@ -12,3 +12,5 @@ To clean up build files, run:
 ```
 make clean
 ```
+
+Duo frontpage package was created by Dag Langmyhr. For more info about using the package, see http://dag.at.ifi.uio.no/public/doc/duomasterforside-guide.pdf.

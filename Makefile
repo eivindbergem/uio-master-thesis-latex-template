@@ -1,11 +1,14 @@
 SRCDIR=src
-export SRCFILE=thesis
-export PDF=$(SRCFILE).pdf
+SRCFILE=thesis
+PDF=$(SRCFILE).pdf
+CITATIONS=citations.bib
+
+export TEXINPUTS := duoforside/:$(TEXINPUTS)
 
 all: $(PDF)
 
-$(PDF): $(SRCDIR)/$(SRCFILE).tex
-	cd $(SRCDIR) && $(MAKE) && mv $(PDF) ..
+$(PDF): $(SRCDIR)/$(SRCFILE).tex $(SRCDIR)/$(CITATIONS)
+	cd $(SRCDIR) && latexmk -pdf -use-make $(SRCFILE) && mv $(PDF) ..
 
 clean:
-	rm $(PDF) && cd $(SRCDIR) && $(MAKE) clean
+	rm $(PDF) && cd $(SRCDIR) && latexmk -CA && rm $(SRCFILE).bbl

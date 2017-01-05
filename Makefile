@@ -3,7 +3,7 @@ SRCFILE=thesis
 PDF=$(SRCFILE).pdf
 CITATIONS=citations.bib
 
-export TEXINPUTS := duoforside/:$(TEXINPUTS)
+export TEXINPUTS := ifimaster/:duoforside/:$(TEXINPUTS)
 
 all: $(PDF)
 

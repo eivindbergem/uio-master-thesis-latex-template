@@ -2,8 +2,11 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{babel,duomasterforside}
-\usepackage{cite}
 \usepackage{hyperref}
+
+\usepackage[backend=biber,style=authoryear]{biblatex}
+
+\addbibresource{citations.bib}
 
 \title{Master Thesis}
 \subtitle{A contribution to the world’s collected knowledge on this topic}
@@ -18,8 +21,7 @@ long]
 
 Donald Knuth often says smart stuff ~\cite{Knuth:2007:CPA:1283920.1283929}.
 
-\bibliographystyle{ieeetr}
 
-\bibliography{citations}{}
+\printbibliography
 
 \end{document}

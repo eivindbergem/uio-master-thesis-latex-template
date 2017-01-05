@@ -11,4 +11,4 @@ $(PDF): $(SRCDIR)/$(SRCFILE).tex $(SRCDIR)/$(CITATIONS)
 	cd $(SRCDIR) && latexmk -pdf -use-make $(SRCFILE) && mv $(PDF) ..
 
 clean:
-	rm $(PDF) && cd $(SRCDIR) && latexmk -CA && rm $(SRCFILE).bbl
+	rm $(PDF) && cd $(SRCDIR) && latexmk -CA && rm $(SRCFILE).bbl $(SRCFILE).run.xml
